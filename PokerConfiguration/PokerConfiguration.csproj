@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E5F11EA-C935-4CE8-AFE1-E7D0D26DBC8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokerConfiguration</RootNamespace>
+    <AssemblyName>PokerConfiguration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.3.0\lib\net45\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Factory, Version=3.3.2.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Factory.3.3.2\lib\net45\Ninject.Extensions.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FuncoesTela\TelaEventoAberto.cs" />
+    <Compile Include="InterfacesTela\FrmConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesTela\FrmConfiguracao.Designer.cs">
+      <DependentUpon>FrmConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesTela\FrmTelaDadosEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesTela\FrmTelaDadosEvento.Designer.cs">
+      <DependentUpon>FrmTelaDadosEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesTela\FrmTorneios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesTela\FrmTorneios.Designer.cs">
+      <DependentUpon>FrmTorneios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesTela\InterfaceAdministracao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfacesTela\InterfaceAdministracao.Designer.cs">
+      <DependentUpon>InterfaceAdministracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesTela\InterfaceConfiguracaoNivel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfacesTela\InterfaceConfiguracaoNivel.Designer.cs">
+      <DependentUpon>InterfaceConfiguracaoNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesTela\InterfaceEventoAberto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfacesTela\InterfaceEventoAberto.Designer.cs">
+      <DependentUpon>InterfaceEventoAberto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesTela\VoiceAplicacao.cs" />
+    <Compile Include="NinjectModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\BlindsAplicacao.cs" />
+    <Compile Include="Servicos\Configuraca.cs" />
+    <Compile Include="Servicos\EventoAplicacao.cs" />
+    <Compile Include="Servicos\TorneioAplicacao.cs" />
+    <EmbeddedResource Include="InterfacesTela\FrmConfiguracao.resx">
+      <DependentUpon>FrmConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesTela\FrmTelaDadosEvento.resx">
+      <DependentUpon>FrmTelaDadosEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesTela\FrmTorneios.resx">
+      <DependentUpon>FrmTorneios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesTela\InterfaceAdministracao.resx">
+      <DependentUpon>InterfaceAdministracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesTela\InterfaceConfiguracaoNivel.resx">
+      <DependentUpon>InterfaceConfiguracaoNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesTela\InterfaceEventoAberto.resx">
+      <DependentUpon>InterfaceEventoAberto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PokerConfiguration.Aplicacao\PokerConfiguration.Aplicacao.csproj">
+      <Project>{542360de-d827-460b-a246-a5a7f8088ba8}</Project>
+      <Name>PokerConfiguration.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerConfiguration.Dominio\PokerConfiguration.Dominio.csproj">
+      <Project>{1788ec1a-466a-4032-8cc1-ec10b045c93e}</Project>
+      <Name>PokerConfiguration.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerConfiguration.Infra\PokerConfiguration.Infra.csproj">
+      <Project>{f838a60a-e721-422d-8e18-80a33ca045c9}</Project>
+      <Name>PokerConfiguration.Infra</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
